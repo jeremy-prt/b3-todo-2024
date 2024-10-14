@@ -58,5 +58,14 @@ class TaskController
       file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT));
     }
 
+    public function debugTask($id)
+    {
+      $tasks = $this->getTasks();
+      foreach ($tasks as &$task) {
+            if ($task['id'] === $id) {
+                var_dump($task);
+            }
+        }
+    }
     
 }

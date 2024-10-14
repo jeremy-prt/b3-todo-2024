@@ -1,8 +1,8 @@
 {
     "1": {
-        "id": "670ce1545ca28",
-        "title": "test",
-        "description": "ceci est un test",
+        "id": "670ce288684dd",
+        "title": "La tâche de Gabriel",
+        "description": "Je fais des tests sur ma machine",
         "status": "todo",
         "created_at": "2024-10-14 09:16:04",
         "due_date": "2024-10-25"
