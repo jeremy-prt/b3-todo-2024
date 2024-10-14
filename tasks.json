@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Ma premi\u00e8re t\u00e2che",
         "description": "Ceci est une t\u00e2che d'exemple.",
-        "status": "\u00e0 faire",
+        "status": "in_progress",
         "created_at": "2024-10-14 09:00:00",
         "due_date": "2024-10-20"
     },
@@ -14,5 +14,21 @@
         "status": "todo",
         "created_at": "2024-10-14 09:16:04",
         "due_date": "2024-10-25"
+    },
+    {
+        "id": "670ce2886872e",
+        "title": "test2",
+        "description": "testayyoo",
+        "status": "done",
+        "created_at": "2024-10-14 09:21:12",
+        "due_date": "2024-10-11"
+    },
+    {
+        "id": "670ce4c5ebd29",
+        "title": "test8",
+        "description": "ttedqsq",
+        "status": "todo",
+        "created_at": "2024-10-14 09:30:45",
+        "due_date": "2024-10-18"
     }
 ]
