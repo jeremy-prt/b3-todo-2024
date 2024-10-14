@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                         <div class="task-header">
                             <strong><?php echo htmlspecialchars($task['title']); ?></strong>
+                            <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button">Supprimer</a>
                         </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
                         <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>
@@ -47,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                         <div class="task-header">
                             <strong><?php echo htmlspecialchars($task['title']); ?></strong>
+                            <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">Supprimer</a>
                         </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
                         <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>
@@ -64,6 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                         <div class="task-header">
                             <strong><?php echo htmlspecialchars($task['title']); ?></strong>
+                            <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">Supprimer</a>
                         </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
                         <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>

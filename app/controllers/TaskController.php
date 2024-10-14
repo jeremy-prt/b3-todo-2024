@@ -45,4 +45,18 @@ class TaskController
         }
         file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT));
     }
+
+    public function deleteTask($id)
+    {
+      $tasks = $this->getTasks();
+      // Filtrer les tâches pour supprimer celle qui correspond à l'ID
+      $tasks = array_filter($tasks, function($task) use ($id) {
+          return $task['id'] !== $id;
+      });
+
+      // Réécrire le fichier JSON avec les tâches restantes
+      file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT));
+    }
+
+    
 }
