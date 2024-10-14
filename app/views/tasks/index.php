@@ -1,11 +1,8 @@
 <?php
-// Inclusion du contrôleur
 require_once '../../../app/controllers/TaskController.php';
 
-// Création d'une instance du contrôleur
 $taskController = new TaskController();
 
-// Récupération des tâches depuis le contrôleur
 $tasks = $taskController->getTasks();
 ?>
 
@@ -20,8 +17,6 @@ $tasks = $taskController->getTasks();
 <body>
     <div class="container">
         <h1>Ma todo list</h1>
-
-        <!-- Tableau pour afficher les tâches -->
         <table border="1" cellpadding="10">
             <thead>
                 <tr>
@@ -39,7 +34,6 @@ $tasks = $taskController->getTasks();
                         <td colspan="6">Aucune tâche disponible pour le moment.</td>
                     </tr>
                 <?php else: ?>
-                    <!-- Boucle sur les tâches pour les afficher -->
                     <?php foreach ($tasks as $task): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($task['title']); ?></td>
@@ -57,7 +51,6 @@ $tasks = $taskController->getTasks();
             </tbody>
         </table>
 
-        <!-- Bouton pour ajouter une nouvelle tâche -->
         <a href="add.php">
             <button>Ajouter une nouvelle tâche</button>
         </a>
