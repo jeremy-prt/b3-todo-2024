@@ -1,25 +1,9 @@
 {
-    "1": {
-        "id": "670ce1545ca28",
-        "title": "test",
-        "description": "ceci est un test",
-        "status": "todo",
-        "created_at": "2024-10-14 09:16:04",
-        "due_date": "2024-10-25"
-    },
-    "2": {
-        "id": "670ce2886872e",
-        "title": "test2",
-        "description": "testayyoo",
-        "status": "todo",
-        "created_at": "2024-10-14 09:21:12",
-        "due_date": "2024-10-11"
-    },
     "3": {
         "id": "670ce8e897923",
         "title": "faire a manger",
-        "description": "cuire un oeuf",
-        "status": "done",
+        "description": "cuire un oeuf2",
+        "status": "in_progress",
         "created_at": "2024-10-14 09:48:24",
         "due_date": "2024-10-25"
     }

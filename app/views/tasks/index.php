@@ -2,11 +2,7 @@
 require_once '../../../app/controllers/TaskController.php';
 
 $taskController = new TaskController();
-
-// Récupération des tâches
 $tasks = $taskController->getTasks();
-
-// Compteur des tâches par statut
 $todoCount = 0;
 $inProgressCount = 0;
 $doneCount = 0;
@@ -48,13 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task todo" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                     <div class="task-header">
                         <strong><?php echo htmlspecialchars($task['title']); ?></strong>
-                        <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
+                            <div class="icons">
+                                <a href="edit.php?id=<?php echo $task['id']; ?>" class="edit-button">
+                                    <i class="fas fa-pen-to-square"></i>
+                                </a>
+                                <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </div>
                     </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
-                        <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>
-                        <p>Date d'échéance: <?php echo htmlspecialchars($task['due_date']); ?></p>
+                        <p>Date de création : <?php echo htmlspecialchars($task['created_at']); ?></p>
+                        <p>Date d'échéance : <?php echo htmlspecialchars($task['due_date']); ?></p>
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
@@ -68,9 +69,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task in-progress" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                     <div class="task-header">
                         <strong><?php echo htmlspecialchars($task['title']); ?></strong>
-                        <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
+                            <div class="icons">
+                                <a href="edit.php?id=<?php echo $task['id']; ?>" class="edit-button">
+                                    <i class="fas fa-pen-to-square"></i>
+                                </a>
+                                <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </div>
                     </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
                         <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>
@@ -88,9 +94,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
                     <div class="task done" id="<?php echo $task['id']; ?>" draggable="true" ondragstart="drag(event)">
                     <div class="task-header">
                         <strong><?php echo htmlspecialchars($task['title']); ?></strong>
-                        <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
+                            <div class="icons">
+                                <a href="edit.php?id=<?php echo $task['id']; ?>" class="edit-button">
+                                    <i class="fas fa-pen-to-square"></i>
+                                </a>
+                                <a href="delete.php?id=<?php echo $task['id']; ?>" class="delete-button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ?');">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </div>
                     </div>
                         <p><?php echo htmlspecialchars($task['description']); ?></p>
                         <p>Date de création: <?php echo htmlspecialchars($task['created_at']); ?></p>
@@ -102,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
     </div>
 
     <a id="add-task" href="add.php">
-        <button>Ajouter tâche</button>
+        <button>Ajouter une tâche</button>
     </a>
     <script src="../../../public/js/script.js"></script>
 </body>
