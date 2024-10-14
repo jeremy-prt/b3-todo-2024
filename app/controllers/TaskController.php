@@ -58,6 +58,24 @@ class TaskController
       file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT));
     }
 
+    public function editTask($id, $title, $description, $status, $dueDate)
+    {
+        $tasks = $this->getTasks();
+
+        foreach ($tasks as &$task) {
+            if ($task['id'] === $id) {
+                $task['title'] = $title;
+                $task['description'] = $description;
+                $task['status'] = $status;
+                $task['due_date'] = $dueDate;
+                break;
+            }
+        }
+
+        file_put_contents($this->tasksFile, json_encode($tasks, JSON_PRETTY_PRINT));
+    }
+
+
     public function debugTask($id)
     {
       $tasks = $this->getTasks();

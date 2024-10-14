@@ -57,20 +57,37 @@ body {
 
 .task-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.task-header strong {
-  color: var(--primary-color);
-  font-size: 1.2em;
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.action-icons {
+  display: flex;
+}
+
+.edit-button,
 .delete-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.2em;
+}
+
+.edit-button {
+  color: #28a745;
+}
+
+.edit-button:hover {
+  color: #218838;
+}
+
+.delete-button {
   color: #dc3545;
 }
 
@@ -163,13 +180,18 @@ button {
   transition: background-color 0.3s ease;
 }
 
+#add-task {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 button:hover {
   background-color: #5a339d;
 }
 
 a {
   display: inline-block;
-  margin-top: 15px;
   text-decoration: none;
   color: #6f42c1;
   font-weight: bold;

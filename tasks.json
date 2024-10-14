@@ -1,9 +1,9 @@
 {
     "1": {
         "id": "670ce288684dd",
-        "title": "La tâche de Gabriel",
+        "title": "La t\u00e2che de Gabriel",
         "description": "Je fais des tests sur ma machine",
-        "status": "todo",
+        "status": "done",
         "created_at": "2024-10-14 09:16:04",
         "due_date": "2024-10-25"
     },
@@ -18,9 +18,17 @@
     "3": {
         "id": "670ce8e897923",
         "title": "faire a manger",
-        "description": "cuire un oeuf",
+        "description": "cuire un oeuf2",
         "status": "done",
         "created_at": "2024-10-14 09:48:24",
         "due_date": "2024-10-25"
+    },
+    "4": {
+        "id": "670d153627d51",
+        "title": "Faire les cours",
+        "description": "chips\r\nbacon\r\nchocolat\r\ngang",
+        "status": "in_progress",
+        "created_at": "2024-10-14 12:57:26",
+        "due_date": "2024-10-24"
     }
 }
