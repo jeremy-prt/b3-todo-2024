@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #6f42c1; /* Violet */
-  --todo-color: #f8d7da; /* Rouge pâle pour les tâches à faire */
-  --in-progress-color: #fff3cd; /* Jaune pâle pour les tâches en cours */
-  --done-color: #d4edda; /* Vert pâle pour les tâches terminées */
+  --primary-color: #6f42c1;
+  --todo-color: #f8d7da;
+  --in-progress-color: #fff3cd;
+  --done-color: #d4edda;
 }
 
 body {
@@ -47,7 +47,7 @@ body {
   background-color: var(--todo-color);
 }
 
-.task.in_progress {
+.task.in-progress {
   background-color: var(--in-progress-color);
 }
 
@@ -58,24 +58,24 @@ body {
 .task-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Pour aligner verticalement le titre et l'icône */
+  align-items: center;
 }
 
 .task-header strong {
   color: var(--primary-color);
-  font-size: 1.2em; /* Ajuste la taille du titre si nécessaire */
+  font-size: 1.2em;
 }
 
 .delete-button {
-  background-color: transparent; /* Pas de fond */
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.2em;
-  color: #dc3545; /* Couleur rouge pour l'icône */
+  color: #dc3545;
 }
 
 .delete-button:hover {
-  color: #c82333; /* Rouge plus sombre au survol */
+  color: #c82333;
 }
 
 a {
@@ -102,8 +102,6 @@ button:hover {
   background-color: #5a339d;
 }
 
-/* Créer tache  */
-/* Style pour le formulaire d'ajout de tâche */
 .container {
   width: 50%;
   margin: 0 auto;
@@ -116,7 +114,7 @@ button:hover {
 
 h1 {
   text-align: center;
-  color: #6f42c1; /* Couleur principale violette */
+  color: #6f42c1;
 }
 
 form {
@@ -127,7 +125,7 @@ form {
 
 label {
   font-weight: bold;
-  color: #6f42c1; /* Couleur principale violette */
+  color: #6f42c1;
 }
 
 input[type="text"],
@@ -146,7 +144,7 @@ input[type="text"]:focus,
 textarea:focus,
 select:focus,
 input[type="date"]:focus {
-  border-color: #6f42c1; /* Couleur principale violette lors de la mise au point */
+  border-color: #6f42c1;
   outline: none;
 }
 
