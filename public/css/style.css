@@ -1,0 +1,182 @@
+:root {
+  --primary-color: #6f42c1; /* Violet */
+  --todo-color: #f8d7da; /* Rouge pâle pour les tâches à faire */
+  --in-progress-color: #fff3cd; /* Jaune pâle pour les tâches en cours */
+  --done-color: #d4edda; /* Vert pâle pour les tâches terminées */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 20px;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.kanban-column {
+  width: 30%;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h2 {
+  text-align: center;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.task {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: move;
+  transition: background-color 0.3s ease;
+}
+
+.task.todo {
+  background-color: var(--todo-color);
+}
+
+.task.in_progress {
+  background-color: var(--in-progress-color);
+}
+
+.task.done {
+  background-color: var(--done-color);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Pour aligner verticalement le titre et l'icône */
+}
+
+.task-header strong {
+  color: var(--primary-color);
+  font-size: 1.2em; /* Ajuste la taille du titre si nécessaire */
+}
+
+.delete-button {
+  background-color: transparent; /* Pas de fond */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #dc3545; /* Couleur rouge pour l'icône */
+}
+
+.delete-button:hover {
+  color: #c82333; /* Rouge plus sombre au survol */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #5a339d;
+}
+
+/* Créer tache  */
+/* Style pour le formulaire d'ajout de tâche */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: #6f42c1; /* Couleur principale violette */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #6f42c1; /* Couleur principale violette */
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus,
+input[type="date"]:focus {
+  border-color: #6f42c1; /* Couleur principale violette lors de la mise au point */
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a339d;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
