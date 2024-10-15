@@ -7,6 +7,9 @@
   <title>TodoList</title>
 </head>
 <body>
-  
+  <main>
+    <section id="left">test</section>
+    <section id="right"></section>
+  </main>
 </body>
 </html>

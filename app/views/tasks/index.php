@@ -48,9 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
 
     <form action="index.php" method="GET">
         <label for="due_date">Filtrer les tâches par date d'échéance :</label>
-        <input type="date" id="due_date" name="due_date" value="<?php echo htmlspecialchars($selectedDate); ?>">
-        <button type="submit">Filtrer</button>
-        <a href="index.php">Réinitialiser</a>
+        <div class="inputs">
+            <input type="date" id="due_date" name="due_date" value="<?php echo htmlspecialchars($selectedDate); ?>">
+            <button type="submit">Filtrer</button>
+        </div>
+        <!-- <a href="index.php">Réinitialiser</a> -->
     </form>
 
     <div class="kanban-board">
@@ -130,8 +132,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['task_id'])) {
         </div>
     </div>
 
-    <a href="add.php">
-        <button>Ajouter tâche</button>
+    <a id="add-task" href="add.php">
+        <button>Ajouter une nouvelle tâche</button>
     </a>
     <script src="../../../public/js/script.js"></script>
 </body>
